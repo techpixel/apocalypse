@@ -1,0 +1,36 @@
+<!-- Simple html page that automatically prompts upload image -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Awaits Transferrance</title>
+</head>
+<body>
+    <html>
+        <p>Memories requested for upload to databank capsule, saved for the future viewing by the common of mankind</p><br>
+        <p>Select memory to upload:</p><br>
+        <body>
+            <form ref='uploadForm' 
+                id='uploadForm' 
+                action='remembrance' 
+                method='post' 
+                encType="multipart/form-data">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Memory" name="submit">
+            </form>     
+        </body>
+      </html>    
+    <style>
+        /*
+        White FG, Black BG, Mono font
+        */
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        * {
+            font-family: monospace;
+        }
+    </style>
+</body>
+</html>
