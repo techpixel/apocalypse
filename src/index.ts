@@ -101,8 +101,6 @@ app.post('/remembrance', async (req, res) => {
         db.data.count++;
         await db.write();
 
-        res.send('A relevation appears...');
-
         inner.getWss().clients.forEach(async (client) => {
             await db.read();
             const count = db.data.count;
@@ -115,6 +113,8 @@ app.post('/remembrance', async (req, res) => {
                 client.send(truths[count - 1]);
             }
         });
+
+        res.redirect('/');
     });    
 });
 
